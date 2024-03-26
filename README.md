@@ -2,7 +2,14 @@
 ## Project 01 - Bank Software
 
 Names:
-<< add 3-4 names here >>
+1. Joseph Averill
+2. Gabriel Smullyan
+3. Amirzhan Skakov
+4. Ishmeet Kaur
+
+Sprint goal:
+Designing the overall structure of the project:
+Learn react and google sheets/dattabse
 
 Link to UML Use Case Diagram:
 << add linkk here >>
@@ -28,5 +35,9 @@ Don't forget to use Test-Driven Development (TDD)
 2. Write Tests
 3. Implement Method Functions
 
+
+
+
 Good Luck!
+
 
