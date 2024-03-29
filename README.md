@@ -12,23 +12,20 @@ Designing the overall structure of the project:
 Learn react and google sheets/dattabse
 
 Link to UML Use Case Diagram:
-<< add linkk here >>
-
-Link to UML Class Diagram:
-<< add link here >>
+https://drive.google.com/file/d/1gmeFouQo_82v35QDxGCthWoNIe6hs5F2/view?usp=sharing
 
 Three Use Cases that you will implement first:
-1. -
-2. - 
-3. - 
+1. - Create and add User
+2. - Add and modify project
+3. - View operating hours
 
 Which classes & methods do you need to implement for these use cases?
 (Indicated which team member is responsible for the implemenation)
-1. -
-2. -
-3. -
-4. -
-5. << add more as needed >>
+1. - Construction software and Admin - Amir
+2. - Project class - Ishmeet
+3. - User and Client - Gabe
+4. - Member class - Joe
+
 
 Don't forget to use Test-Driven Development (TDD)
 1. Write Class and Method Function Headers
