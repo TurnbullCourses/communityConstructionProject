@@ -1,23 +1,13 @@
 package edu.ithaca.dturnbull.construction;
 public interface User {
-
-    void login();
-    void logout();
-    void register();
     void deleteAccount();
     void updateAccount();
-    void changePassword();
-    void checkPassword();
-    void getEmail();
-    void setEmail();
-    void getName();
-    void setName();
-    void viewCurrentProject();
-    void viewOperatingHours();
-
-
-    
-
-
-    
+    void changePassword(String password);
+    boolean checkPassword(String password);
+    String getEmail();
+    void changeEmail(String email);
+    String getName();
+    void changeName(String name);
+    Project viewCurrentProject();
+    String viewOperatingHours();
 }
