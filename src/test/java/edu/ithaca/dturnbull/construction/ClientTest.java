@@ -2,27 +2,39 @@ package edu.ithaca.dturnbull.construction;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.time.LocalDateTime;
+
 import org.junit.jupiter.api.Test;
 
 
 public class ClientTest {
 
     @Test
-    public void testLogin(){
-        Client client = new Client("name", "email", "password");
-        assertEquals("name", client.getName());
+    public void testAccountInfo(){
+        Client client = new Client("name", "email", "password",0);
+        assertEquals("name", client.getFullName());
         assertEquals("email", client.getEmail());
-        assertTrue(client.checkPassword("password"));
-        client.changePassword("newPassword");
-        assertTrue(client.checkPassword("newPassword"));
-        client.changeName("newName");
-        assertEquals("newName", client.getName());
+        assertEquals("password", client.getPassword());
+        assertEquals(0, client.getId());
+        client.setPassword("newPassword");
+        assertEquals(client.getPassword(), "newPassword");
+        client.setFullName("newName");
+        assertEquals("newName", client.getFullName());
+        client.setEmail("newEmail");
+        assertEquals("newEmail", client.getEmail());
+    }
 
-
-
-
-
-
+    @Test
+    public void testRequestCurrentProject(){
+        Client client = new Client("name", "email", "password",0);
+        LocalDateTime time = LocalDateTime.now();
+        Project project = new Project("name", 0, 0.0, time, time, time);
+        client.currentProject = project;
+        assertEquals(project, client.requestCurrentProject());
+        assertEquals(time, client.requestCompletionDate());
+        assertEquals(0.0, client.requestCost());
+        assertEquals("From " + time.toLocalTime().toString() + " to " + time.toLocalTime().toString(), client.requestOperatingHours());
     }
 
 }
