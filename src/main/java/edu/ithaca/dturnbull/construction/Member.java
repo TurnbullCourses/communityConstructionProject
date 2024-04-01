@@ -43,7 +43,7 @@ public class Member extends User {
      */
     public double viewCost() {
         
-        return null;
+        return 0;
     }
 
     /**
@@ -52,7 +52,7 @@ public class Member extends User {
      */
     public String viewOperatingHours() {
         
-        return null;
+        return "null";
     }
 
     /**
