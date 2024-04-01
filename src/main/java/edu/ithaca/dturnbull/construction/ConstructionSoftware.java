@@ -112,7 +112,7 @@ public class ConstructionSoftware {
 
     public Project getProject(String projectName){
         for(Project project : projects){
-            if(project.getProjectName().equals(projectName)){
+            if(project.getName().equals(projectName)){
                 return project;
             }
         }
@@ -157,7 +157,7 @@ public class ConstructionSoftware {
 
     public boolean projectExists(String projectName){
         for(Project project : projects){
-            if(project.getProjectName().equals(projectName)){
+            if(project.getName().equals(projectName)){
                 return true;
             }
         }
@@ -208,7 +208,7 @@ public class ConstructionSoftware {
 
     public boolean projectPasswordMatches(String projectName, String password){
         for(Project project : projects){
-            if(project.getProjectName().equals(projectName)){
+            if(project.getName().equals(projectName)){
                 if(project.getPassword().equals(password)){
                     return true;
                 }
@@ -279,7 +279,7 @@ public class ConstructionSoftware {
         return currentProjects;
     }
 
-    
+
 
 
 
