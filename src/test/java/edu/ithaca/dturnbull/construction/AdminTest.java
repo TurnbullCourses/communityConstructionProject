@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 
 
 public class AdminTest {
+<<<<<<< HEAD
+   
+=======
     
     ConstructionSoftware constructionSoftware = new ConstructionSoftware();
 
@@ -53,4 +56,5 @@ public class AdminTest {
 
 
     
+>>>>>>> origin/main
 }
