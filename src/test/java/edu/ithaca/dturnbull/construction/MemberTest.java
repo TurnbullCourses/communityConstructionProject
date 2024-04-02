@@ -36,7 +36,8 @@ public class MemberTest {
     public void testAllViews() {
         Member member = new Member("Joe A", "member@email.com", "samplePassword", 1);
         LocalDateTime time = LocalDateTime.now();
-        Project project = new Project("Project Name", 1, 0.0 , time, time, time);
+        LocalDate date = LocalDate.now();
+        Project project = new Project("Project Name", 1, 0.0 , date, time, time);
         member.currentProject = project;
         // View Current Project
         assertEquals(project, member.viewCurrentProject());
@@ -45,7 +46,7 @@ public class MemberTest {
         // View Operating Hours of the Current Project
         assertEquals("From " + time.toLocalTime().toString() + " to " + time.toLocalTime().toString(), member.viewOperatingHours());
         // View Timeline of the Current Project
-        assertEquals("From NO START DATE IN PROJECT to " + time.toString(), member.viewTimeline());
+        assertEquals("From NO START DATE IN PROJECT to " + date.toString(), member.viewTimeline());
     }
 
 }

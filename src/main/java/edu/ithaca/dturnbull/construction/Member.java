@@ -1,6 +1,6 @@
 package edu.ithaca.dturnbull.construction;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Member extends User {
     // Member Constructor 
@@ -21,7 +21,7 @@ public class Member extends User {
      * View the completionDate associated with the current project
      * @return The Completion Date
      */
-    public LocalDateTime viewCompletionDate() {
+    public LocalDate viewCompletionDate() {
         return currentProject.getCompletionDate();
     }
 

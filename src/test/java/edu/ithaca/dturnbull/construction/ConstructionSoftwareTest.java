@@ -1,5 +1,6 @@
 package edu.ithaca.dturnbull.construction;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import org.junit.jupiter.api.Test;
@@ -32,7 +33,8 @@ public class ConstructionSoftwareTest {
     @Test
     public void addProjectTest(){
         LocalDateTime time = LocalDateTime.now();
-        Project project = new Project("Project Name", 1, 230000, time, time, time);
+        LocalDate date = LocalDate.now();
+        Project project = new Project("Project Name", 1, 230000, date, time, time);
         constructionSoftware.addProject(project);
         assert(constructionSoftware.projects.contains(project));
     }
@@ -71,7 +73,8 @@ public class ConstructionSoftwareTest {
     @Test
     public void removeProjectTest(){
         LocalDateTime time = LocalDateTime.now();
-        Project project = new Project("Project Name", 1, 230000, time, time, time);
+        LocalDate date = LocalDate.now();
+        Project project = new Project("Project Name", 1, 230000, date, time, time);
         constructionSoftware.addProject(project);
         constructionSoftware.removeProject(project);
         assert(!constructionSoftware.projects.contains(project));
@@ -88,7 +91,8 @@ public class ConstructionSoftwareTest {
     @Test
     public void currentProjectsTest(){
         LocalDateTime time = LocalDateTime.now();
-        Project project = new Project("Project Name", 1, 230000, time, time, time);
+        LocalDate date = LocalDate.now();
+        Project project = new Project("Project Name", 1, 230000, date, time, time);
         constructionSoftware.addCurrentProject(project); // addCurrentProject is similar to addProject
         assert(constructionSoftware.currentProjects.contains(project));
     }
@@ -96,7 +100,8 @@ public class ConstructionSoftwareTest {
     @Test
     public void pastProjectsTest(){
         LocalDateTime time = LocalDateTime.now();
-        Project project = new Project("Project Name", 1, 230000, time, time, time);
+        LocalDate date = LocalDate.now();
+        Project project = new Project("Project Name", 1, 230000, date, time, time);
         constructionSoftware.addPastProject(project); 
         assert(constructionSoftware.pastProjects.contains(project));
     }

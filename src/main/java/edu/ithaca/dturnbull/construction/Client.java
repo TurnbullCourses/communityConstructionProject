@@ -1,5 +1,6 @@
 package edu.ithaca.dturnbull.construction;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import edu.ithaca.dturnbull.construction.Project;
@@ -23,7 +24,7 @@ public class Client extends User{
         return currentProject.getOperatingHours();
     }
 
-    public LocalDateTime requestCompletionDate(){ //TODO -- same as above
+    public LocalDate requestCompletionDate(){ //TODO -- same as above
         return currentProject.getCompletionDate();
     }
 
