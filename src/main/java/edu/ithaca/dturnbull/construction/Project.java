@@ -8,18 +8,18 @@ import java.time.format.DateTimeFormatter;
 
 public class Project {
     //
-    private String name;
-    private Integer id;
-    private double price;
-    private LocalDate completionDate;
-    private LocalDateTime operatingHoursStart;
-    private LocalDateTime operatingHoursEnd;
+
+    private static String name;
+    private static Integer id;
+    private static double price;
+    private static LocalDate completionDate;
+    private static LocalDateTime operatingHoursStart;
+    private static LocalDateTime operatingHoursEnd;
 
     public String getFormattedCompletionDate() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yy");
         return completionDate.format(formatter);
     }
-
 
 
 public Project(String name, Integer id, double price, LocalDate completionDate, LocalDateTime operatingHoursStart, LocalDateTime operatingHoursEnd){
@@ -31,23 +31,23 @@ public Project(String name, Integer id, double price, LocalDate completionDate, 
     this.operatingHoursEnd = operatingHoursEnd;
 }
 
-public int getProjectId() {
+public static int getProjectId() {
     return id;
 }
 
-public String getName() {
+public static String getName() {
     return name;
 }
 
-public double getPrice() {
+public static double getPrice() {
     return price;
 }
 
-public LocalDate getCompletionDate() {
+public static LocalDate getCompletionDate() {
     return completionDate;
 }
 
-public String getOperatingHours() {
+public static String getOperatingHours() {
     return "From " + operatingHoursStart.toLocalTime().toString() + " to " + operatingHoursEnd.toLocalTime().toString();
 }
 
@@ -63,6 +63,7 @@ public void setName(String name) {
 public void setPrice(double price) {
     this.price = price;
 }
+
 
 public void setCompletionDate(LocalDate completionDate) {
     this.completionDate = completionDate;

@@ -1,5 +1,7 @@
 package edu.ithaca.dturnbull.construction;
 
+import java.time.LocalDateTime;
+
 public class Member extends User {
 
     private String email;
@@ -32,18 +34,19 @@ public class Member extends User {
      * View the current project that is being worked on
      * @return The current project
      */
-    public Project viewCurrentProject() {
-        
-        return null;
+    public String viewCurrentProject() {
+        int id = Project.getProjectId();
+        String name = Project.getName();
+        return "Project ID: " + String.valueOf(id) + "\n" + "Project name: " + name;
     }
 
     /**
-     * View the cost associated with the current project
+     * View the price associated with the current project
      * @return The cost
      */
-    public double viewCost() {
-        
-        return 0;
+    public double viewPrice() {
+        double price = Project.getPrice();
+        return price;
     }
 
     /**
@@ -51,8 +54,8 @@ public class Member extends User {
      * @return The operating hours
      */
     public String viewOperatingHours() {
-        
-        return "null";
+        String operatingHours = Project.getOperatingHours();
+        return operatingHours;
     }
 
     /**
@@ -60,8 +63,8 @@ public class Member extends User {
      * @return The timeline
      */
     public String viewTimeline() {
-        
-        return null;
+        String completionDate = Project.getCompletionDate();
+        return completionDate;
     }
 
 }
