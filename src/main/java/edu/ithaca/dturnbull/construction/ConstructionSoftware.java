@@ -83,27 +83,27 @@ public class ConstructionSoftware {
         return admins;
     }
 
-    public User getUser(String username){
+    public User getUser(String fullName){
         for(User user : users){
-            if(user.getUsername().equals(username)){
+            if(user.getFullName().equals(fullName)){
                 return user;
             }
         }
         return null;
     }
 
-    public Client getClient(String username){
+    public Client getClient(String fullName){
         for(Client client : clients){
-            if(client.getUsername().equals(username)){
+            if(client.getFullName().equals(fullName)){
                 return client;
             }
         }
         return null;
     }
 
-    public Member getMember(String username){
+    public Member getMember(String fullName){
         for(Member member : members){
-            if(member.getUsername().equals(username)){
+            if(member.getFullName().equals(fullName)){
                 return member;
             }
         }
@@ -112,43 +112,43 @@ public class ConstructionSoftware {
 
     public Project getProject(String projectName){
         for(Project project : projects){
-            if(project.getProjectName().equals(projectName)){
+            if(project.getName().equals(projectName)){
                 return project;
             }
         }
         return null;
     }
 
-    public Admin getAdmin(String username){
+    public Admin getAdmin(String fullName){
         for(Admin admin : admins){
-            if(admin.getUsername().equals(username)){
+            if(admin.getFullName().equals(fullName)){
                 return admin;
             }
         }
         return null;
     }
 
-    public boolean userExists(String username){
+    public boolean userExists(String fullName){
         for(User user : users){
-            if(user.getUsername().equals(username)){
+            if(user.getFullName().equals(fullName)){
                 return true;
             }
         }
         return false;
     }
 
-    public boolean clientExists(String username){
+    public boolean clientExists(String fullName){
         for(Client client : clients){
-            if(client.getUsername().equals(username)){
+            if(client.getFullName().equals(fullName)){
                 return true;
             }
         }
         return false;
     }
 
-    public boolean memberExists(String username){
+    public boolean memberExists(String fullName){
         for(Member member : members){
-            if(member.getUsername().equals(username)){
+            if(member.getFullName().equals(fullName)){
                 return true;
             }
         }
@@ -157,25 +157,25 @@ public class ConstructionSoftware {
 
     public boolean projectExists(String projectName){
         for(Project project : projects){
-            if(project.getProjectName().equals(projectName)){
+            if(project.getName().equals(projectName)){
                 return true;
             }
         }
         return false;
     }
 
-    public boolean adminExists(String username){
+    public boolean adminExists(String fullName){
         for(Admin admin : admins){
-            if(admin.getUsername().equals(username)){
+            if(admin.getFullName().equals(fullName)){
                 return true;
             }
         }
         return false;
     }
 
-    public boolean userPasswordMatches(String username, String password){
+    public boolean userPasswordMatches(String email, String password){
         for(User user : users){
-            if(user.getUsername().equals(username)){
+            if(user.getEmail().equals(email)){
                 if(user.getPassword().equals(password)){
                     return true;
                 }
@@ -184,9 +184,9 @@ public class ConstructionSoftware {
         return false;
     }
 
-    public boolean clientPasswordMatches(String username, String password){
+    public boolean clientPasswordMatches(String email, String password){
         for(Client client : clients){
-            if(client.getUsername().equals(username)){
+            if(client.getEmail().equals(email)){
                 if(client.getPassword().equals(password)){
                     return true;
                 }
@@ -195,9 +195,9 @@ public class ConstructionSoftware {
         return false;
     }
 
-    public boolean memberPasswordMatches(String username, String password){
+    public boolean memberPasswordMatches(String email, String password){
         for(Member member : members){
-            if(member.getUsername().equals(username)){
+            if(member.getEmail().equals(email)){
                 if(member.getPassword().equals(password)){
                     return true;
                 }
@@ -208,8 +208,8 @@ public class ConstructionSoftware {
 
     public boolean projectPasswordMatches(String projectName, String password){
         for(Project project : projects){
-            if(project.getProjectName().equals(projectName)){
-                if(project.getPassword().equals(password)){
+            if(project.getName().equals(projectName)){
+                if(project.getPassword().equals(password)){ //not sure what to do -- there is no password for projects
                     return true;
                 }
             }
@@ -217,9 +217,9 @@ public class ConstructionSoftware {
         return false;
     }
 
-    public boolean adminPasswordMatches(String username, String password){
+    public boolean adminPasswordMatches(String email, String password){
         for(Admin admin : admins){
-            if(admin.getUsername().equals(username)){
+            if(admin.getEmail().equals(email)){
                 if(admin.getPassword().equals(password)){
                     return true;
                 }
@@ -228,27 +228,27 @@ public class ConstructionSoftware {
         return false;
     }
 
-    public boolean userIsAdmin(String username){
+    public boolean userIsAdmin(String fullName){
         for(Admin admin : admins){
-            if(admin.getUsername().equals(username)){
+            if(admin.getFullName().equals(fullName)){
                 return true;
             }
         }
         return false;
     }
 
-    public boolean userIsMember(String username){
+    public boolean userIsMember(String fullName){
         for(Member member : members){
-            if(member.getUsername().equals(username)){
+            if(member.getFullName().equals(fullName)){
                 return true;
             }
         }
         return false;
     }
 
-    public boolean userIsClient(String username){
+    public boolean userIsClient(String fullName){
         for(Client client : clients){
-            if(client.getUsername().equals(username)){
+            if(client.getFullName().equals(fullName)){
                 return true;
             }
         }
@@ -278,10 +278,6 @@ public class ConstructionSoftware {
     public ArrayList<Project> getCurrentProjects(){
         return currentProjects;
     }
+}
 
     
-
-
-
-
-}
