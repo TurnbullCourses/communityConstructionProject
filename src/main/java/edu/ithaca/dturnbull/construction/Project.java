@@ -6,15 +6,15 @@ import java.time.LocalDateTime;
 
 public class Project {
     //
-    private String name;
-    private Integer id;
-    private double price;
-    private LocalDateTime completionDate;
-    private LocalDateTime operatingHoursStart;
-    private LocalDateTime operatingHoursEnd;
+    private static String name;
+    private static Integer id;
+    private static double price;
+    private static String completionDate;
+    private static LocalDateTime operatingHoursStart;
+    private static LocalDateTime operatingHoursEnd;
 
 
-public Project(String name, Integer id, double price, LocalDateTime completionDate, LocalDateTime operatingHoursStart, LocalDateTime operatingHoursEnd){
+public Project(String name, Integer id, double price, String completionDate, LocalDateTime operatingHoursStart, LocalDateTime operatingHoursEnd){
     this.name = name;
     this.id = id;
     this.price= price;
@@ -23,23 +23,23 @@ public Project(String name, Integer id, double price, LocalDateTime completionDa
     this.operatingHoursEnd = operatingHoursEnd;
 }
 
-public int getProjectId() {
+public static int getProjectId() {
     return id;
 }
 
-public String getName() {
+public static String getName() {
     return name;
 }
 
-public double getPrice() {
+public static double getPrice() {
     return price;
 }
 
-public LocalDateTime getCompletionDate() {
+public static String getCompletionDate() {
     return completionDate;
 }
 
-public String getOperatingHours() {
+public static String getOperatingHours() {
     return "From " + operatingHoursStart.toLocalTime().toString() + " to " + operatingHoursEnd.toLocalTime().toString();
 }
 
@@ -56,7 +56,7 @@ public void setPrice(double price) {
     this.price = price;
 }
 
-public void setCompletionDate(LocalDateTime completionDate) {
+public void setCompletionDate(String completionDate) {
     this.completionDate = completionDate;
 }
 
