@@ -31,9 +31,13 @@ public class ClientTest {
         LocalDateTime time = LocalDateTime.now();
         Project project = new Project("name", 0, 0.0, time, time, time);
         client.currentProject = project;
+        // View Current Project
         assertEquals(project, client.requestCurrentProject());
+        // View Cost of the Current Project
         assertEquals(time, client.requestCompletionDate());
+        // View Operating Hours of the Current Project
         assertEquals(0.0, client.requestCost());
+        // View Timeline of the Current Project
         assertEquals("From " + time.toLocalTime().toString() + " to " + time.toLocalTime().toString(), client.requestOperatingHours());
     }
 
