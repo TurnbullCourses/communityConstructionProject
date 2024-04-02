@@ -1,5 +1,5 @@
 # CS345 - Software Engineering at Ithaca College
-## Project 01 - Bank Software
+## Project: Community Construction Software
 
 Names:
 1. Joseph Averill
