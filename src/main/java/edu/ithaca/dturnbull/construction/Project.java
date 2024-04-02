@@ -2,19 +2,27 @@ package edu.ithaca.dturnbull.construction;
 
 import java.sql.Time;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Project {
     //
     private String name;
     private Integer id;
     private double price;
-    private LocalDateTime completionDate;
+    private LocalDate completionDate;
     private LocalDateTime operatingHoursStart;
     private LocalDateTime operatingHoursEnd;
 
+    public String getFormattedCompletionDate() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yy");
+        return completionDate.format(formatter);
+    }
 
-public Project(String name, Integer id, double price, LocalDateTime completionDate, LocalDateTime operatingHoursStart, LocalDateTime operatingHoursEnd){
+
+
+public Project(String name, Integer id, double price, LocalDate completionDate, LocalDateTime operatingHoursStart, LocalDateTime operatingHoursEnd){
     this.name = name;
     this.id = id;
     this.price= price;
@@ -35,7 +43,7 @@ public double getPrice() {
     return price;
 }
 
-public LocalDateTime getCompletionDate() {
+public LocalDate getCompletionDate() {
     return completionDate;
 }
 
@@ -56,7 +64,7 @@ public void setPrice(double price) {
     this.price = price;
 }
 
-public void setCompletionDate(LocalDateTime completionDate) {
+public void setCompletionDate(LocalDate completionDate) {
     this.completionDate = completionDate;
 }
 
