@@ -13,7 +13,5 @@ public class User {
     public void setEmail(){}
     public void getName(){}
     public void setName(){}
-    public void viewCurrentProject(){}
-    public void viewOperatingHours(){}
     
 }
