@@ -4,13 +4,13 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ConstructionSoftware {
-    ArrayList<User> users;
-    ArrayList<Client> clients;
-    ArrayList<Member> members;
-    ArrayList<Project> projects;
-    ArrayList<Admin> admins;
-    ArrayList<Project> pastProjects;
-    ArrayList<Project> currentProjects;
+    protected ArrayList<User> users;
+    protected ArrayList<Client> clients;
+    protected ArrayList<Member> members;
+    protected ArrayList<Project> projects;
+    protected ArrayList<Admin> admins;
+    protected ArrayList<Project> pastProjects;
+    protected ArrayList<Project> currentProjects;
 
 
     public ConstructionSoftware(){

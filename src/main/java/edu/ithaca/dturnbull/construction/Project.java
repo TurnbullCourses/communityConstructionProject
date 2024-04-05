@@ -1,7 +1,5 @@
 package edu.ithaca.dturnbull.construction;
 
-import java.sql.Time;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -9,12 +7,12 @@ import java.time.format.DateTimeFormatter;
 public class Project {
     //
 
-    private static String name;
-    private static Integer id;
-    private static double price;
-    private static LocalDate completionDate;
-    private static LocalDateTime operatingHoursStart;
-    private static LocalDateTime operatingHoursEnd;
+    protected  String name;
+    protected Integer id;
+    protected double price;
+    protected  LocalDate completionDate;
+    protected LocalDateTime operatingHoursStart;
+    protected LocalDateTime operatingHoursEnd;
 
     public String getFormattedCompletionDate() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yy");
@@ -31,23 +29,23 @@ public Project(String name, Integer id, double price, LocalDate completionDate, 
     this.operatingHoursEnd = operatingHoursEnd;
 }
 
-public static int getProjectId() {
+public int getProjectId() {
     return id;
 }
 
-public static String getName() {
+public  String getName() {
     return name;
 }
 
-public static double getPrice() {
+public  double getPrice() {
     return price;
 }
 
-public static LocalDate getCompletionDate() {
+public  LocalDate getCompletionDate() {
     return completionDate;
 }
 
-public static String getOperatingHours() {
+public  String getOperatingHours() {
     return "From " + operatingHoursStart.toLocalTime().toString() + " to " + operatingHoursEnd.toLocalTime().toString();
 }
 

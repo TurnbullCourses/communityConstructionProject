@@ -1,5 +1,6 @@
 package edu.ithaca.dturnbull.construction;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Member extends User {
@@ -62,8 +63,8 @@ public class Member extends User {
      * View the timeline associated with the current project
      * @return The timeline
      */
-    public String viewTimeline() {
-        String completionDate = Project.getCompletionDate();
+    public LocalDate viewTimeline() {
+        LocalDate completionDate = Project.getCompletionDate();
         return completionDate;
     }
 
