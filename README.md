@@ -7,6 +7,8 @@ Names:
 3. Amirzhan Skakov
 4. Ishmeet Kaur
 
+Scrum Master: Ishmeet Kaur
+
 Sprint goal:
 Designing the overall structure of the project:
 Learn react and google sheets/database
