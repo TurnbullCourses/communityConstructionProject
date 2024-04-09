@@ -4,6 +4,7 @@ import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class Project {
@@ -12,8 +13,10 @@ public class Project {
     private Integer id;
     private double price;
     private LocalDate completionDate;
+    private LocalDate creationDate;
     private LocalDateTime operatingHoursStart;
     private LocalDateTime operatingHoursEnd;
+
 
 
 public Project(String name, Integer id, double price, LocalDate completionDate, LocalDateTime operatingHoursStart, LocalDateTime operatingHoursEnd){
@@ -23,6 +26,7 @@ public Project(String name, Integer id, double price, LocalDate completionDate, 
     this.completionDate = completionDate;
     this.operatingHoursStart = operatingHoursStart;
     this.operatingHoursEnd = operatingHoursEnd;
+    this.creationDate = LocalDate.now();
 }
 
 public int getProjectId() {
@@ -39,6 +43,10 @@ public double getPrice() {
 
 public LocalDate getCompletionDate() {
     return completionDate;
+}
+
+public LocalDate getCreationDate() {
+    return creationDate;
 }
 public String getFormattedCompletionDate() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yy");

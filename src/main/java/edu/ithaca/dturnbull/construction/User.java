@@ -43,7 +43,7 @@ public class User {
      * @return The operating hours
      */
     public String viewOperatingHours() {
-        return currentProject.getOperatingHours(); //TODO -- when project is implemented, return the operating hours of the current project
+        return currentProject.getOperatingHours(); 
     }
 
 

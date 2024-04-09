@@ -35,12 +35,16 @@ public class ClientTest {
         client.currentProject = project;
         // View Current Project
         assertEquals(project, client.requestCurrentProject());
-        // View Cost of the Current Project
-        assertEquals(date, client.requestCompletionDate());
-        // View Operating Hours of the Current Project
-        assertEquals(0.0, client.requestCost());
-        // View Timeline of the Current Project
-        assertEquals("From " + time.toLocalTime().toString() + " to " + time.toLocalTime().toString(), client.requestOperatingHours());
-    }
+        // Sets and views Cost of the Current Project
+        assertEquals(0.0, client.viewCurrentProject().getPrice());
+        client.requestCost(10.0);
+        assertEquals(10.0, client.viewCurrentProject().getPrice());
+        // Sets and views Operating Hours of the Current Project
+        assertEquals("From " + time.toLocalTime().toString() + " to " + time.toLocalTime().toString(), client.viewOperatingHours());
+        LocalDateTime time2 = LocalDateTime.of(2024, 4, 1, 17, 0);
+        client.requestOperatingHours(time2, time2);
+        assertEquals("From " + time2.toLocalTime().toString() + " to " + time2.toLocalTime().toString(), client.viewOperatingHours());
+
+        }
 
 }

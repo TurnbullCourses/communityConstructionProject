@@ -46,7 +46,7 @@ public class MemberTest {
         // View Operating Hours of the Current Project
         assertEquals("From " + time.toLocalTime().toString() + " to " + time.toLocalTime().toString(), member.viewOperatingHours());
         // View Timeline of the Current Project
-        assertEquals("From NO START DATE IN PROJECT to " + date.toString(), member.viewTimeline());
+        assertEquals("From " + date.toString() + " to " + date.toString(), member.viewTimeline());
     }
 
 }

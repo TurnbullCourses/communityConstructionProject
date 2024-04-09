@@ -30,8 +30,7 @@ public class Member extends User {
      * @return A string with the start date and completion date of the project
      */
     public String viewTimeline() {
-        return "From " + "NO START DATE IN PROJECT" + " to " + currentProject.getCompletionDate().toString();
-        //TODO -- Add start date to project(get current time in Project constructor)
+        return "From " + currentProject.getCreationDate().toString() + " to " + currentProject.getCompletionDate().toString();
     }
 
 

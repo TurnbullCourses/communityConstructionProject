@@ -14,21 +14,23 @@ public class Client extends User{
         return currentProject; 
     }
 
-    public double requestCost(){
-        return currentProject.getPrice(); 
-        //TODO -- Not sure what Request cost (and other methods) should do differently that viewCost in Member? 
-        //Is it a setter?
+    //sets price of current project
+    public void requestCost(double newCost){
+        if (newCost < 0){
+            throw new IllegalArgumentException("Cost cannot be negative");
+        }
+        currentProject.setPrice(newCost); 
     }
-
-    public String requestOperatingHours(){ //TODO -- same as above
-        return currentProject.getOperatingHours();
+    //sets price of current project
+    public void requestOperatingHours(LocalDateTime start, LocalDateTime end){
+        currentProject.setOperatingHours(start, end);
     }
-
-    public LocalDate requestCompletionDate(){ //TODO -- same as above
-        return currentProject.getCompletionDate();
+    //sets completion date of current project
+    public void requestCompletionDate(LocalDate newDate){ 
+        currentProject.setCompletionDate(newDate);
     }
-
-    public String requestTimeline(){ //TODO -- same as above
+    
+    public String requestTimeline(){ //TODO -- what should this method do?
         return null;
     }
 

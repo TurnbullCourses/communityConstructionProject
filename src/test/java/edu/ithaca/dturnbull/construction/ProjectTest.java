@@ -28,6 +28,7 @@ public class ProjectTest {
         assertEquals(price, project.getPrice(), 0.001);
         assertEquals(completionDate, project.getCompletionDate());
         assertEquals("From 08:00 to 17:00", project.getOperatingHours());
+        assertEquals(LocalDate.now(), project.getCreationDate()); 
     }
 
     @Test
