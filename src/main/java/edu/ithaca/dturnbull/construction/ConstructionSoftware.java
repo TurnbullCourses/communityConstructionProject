@@ -206,16 +206,6 @@ public class ConstructionSoftware {
         return false;
     }
 
-    public boolean projectPasswordMatches(String projectName, String password){
-        for(Project project : projects){
-            if(project.getName().equals(projectName)){
-                if(project.getPassword().equals(password)){ //not sure what to do -- there is no password for projects
-                    return true;
-                }
-            }
-        }
-        return false;
-    }
 
     public boolean adminPasswordMatches(String email, String password){
         for(Admin admin : admins){

@@ -29,10 +29,7 @@ public class Client extends User{
     public void requestCompletionDate(LocalDate newDate){ 
         currentProject.setCompletionDate(newDate);
     }
-    
-    public String requestTimeline(){ //TODO -- what should this method do?
-        return null;
-    }
+
 
     
 
