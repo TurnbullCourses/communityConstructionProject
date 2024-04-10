@@ -1,23 +1,22 @@
 package edu.ithaca.dturnbull.construction;
 
+import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class Project {
     //
+    private String name;
+    private Integer id;
+    private double price;
+    private LocalDate completionDate;
+    private LocalDate creationDate;
+    private LocalDateTime operatingHoursStart;
+    private LocalDateTime operatingHoursEnd;
 
-    protected  String name;
-    protected Integer id;
-    protected double price;
-    protected  LocalDate completionDate;
-    protected LocalDateTime operatingHoursStart;
-    protected LocalDateTime operatingHoursEnd;
-
-    public String getFormattedCompletionDate() {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yy");
-        return completionDate.format(formatter);
-    }
 
 
 public Project(String name, Integer id, double price, LocalDate completionDate, LocalDateTime operatingHoursStart, LocalDateTime operatingHoursEnd){
@@ -27,25 +26,34 @@ public Project(String name, Integer id, double price, LocalDate completionDate, 
     this.completionDate = completionDate;
     this.operatingHoursStart = operatingHoursStart;
     this.operatingHoursEnd = operatingHoursEnd;
+    this.creationDate = LocalDate.now();
 }
 
 public int getProjectId() {
     return id;
 }
 
-public  String getName() {
+public String getName() {
     return name;
 }
 
-public  double getPrice() {
+public double getPrice() {
     return price;
 }
 
-public  LocalDate getCompletionDate() {
+public LocalDate getCompletionDate() {
     return completionDate;
 }
 
-public  String getOperatingHours() {
+public LocalDate getCreationDate() {
+    return creationDate;
+}
+public String getFormattedCompletionDate() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yy");
+        return completionDate.format(formatter);
+    }
+
+public String getOperatingHours() {
     return "From " + operatingHoursStart.toLocalTime().toString() + " to " + operatingHoursEnd.toLocalTime().toString();
 }
 
@@ -61,7 +69,6 @@ public void setName(String name) {
 public void setPrice(double price) {
     this.price = price;
 }
-
 
 public void setCompletionDate(LocalDate completionDate) {
     this.completionDate = completionDate;

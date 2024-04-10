@@ -8,7 +8,7 @@ public class Admin extends User {
     public String fullName;
 
     public Admin(String email, String password, int id, String fullName){
-        super(email, password, id, fullName);
+        super(fullName, email, password, id);
     }
     
     public void manageCurrentProject(){
@@ -38,3 +38,4 @@ public class Admin extends User {
 
 
 }
+

@@ -1,5 +1,8 @@
 package edu.ithaca.dturnbull.construction;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import org.junit.jupiter.api.Test;
 
 public class ConstructionSoftwareTest {
@@ -8,28 +11,30 @@ public class ConstructionSoftwareTest {
 
     @Test
     public void addUserTest(){
-        User user = new User("user@user.com", "password", 1, "Full Name");
+        User user = new User("user@user.com", "password", "Full Name", 1);
         constructionSoftware.addUser(user);
         assert(constructionSoftware.users.contains(user));
     }
     
     @Test
     public void addClientTest(){
-        Client client = new Client("client@client.com", "password", 2, "Full Name");
+        Client client = new Client("client@client.com", "password",  "Full Name",2);
         constructionSoftware.addClient(client);
         assert(constructionSoftware.clients.contains(client));
     }
 
     @Test
     public void addMemberTest(){
-        Member member = new Member("member@member.com", "password", 3, "Full Name");
+        Member member = new Member("member@member.com", "password","Full Name",3);
         constructionSoftware.addMember(member);
         assert(constructionSoftware.members.contains(member));
     }
 
     @Test
     public void addProjectTest(){
-        Project project = new Project("Project Name", 1, 230000, "12/25", "9am-5pm");
+        LocalDateTime time = LocalDateTime.now();
+        LocalDate date = LocalDate.now();
+        Project project = new Project("Project Name", 1, 230000, date, time, time);
         constructionSoftware.addProject(project);
         assert(constructionSoftware.projects.contains(project));
     }
@@ -43,7 +48,7 @@ public class ConstructionSoftwareTest {
 
     @Test
     public void removeUserTest(){
-        User user = new User("user@user.com", "password", 1, "Full Name");
+        User user = new User("user@user.com", "password", "Full Name",1);
         constructionSoftware.addUser(user);
         constructionSoftware.removeUser(user);
         assert(!constructionSoftware.users.contains(user));
@@ -51,7 +56,7 @@ public class ConstructionSoftwareTest {
 
     @Test
     public void removeClientTest(){
-        Client client = new Client("client@client.com", "password", 2, "Full Name");
+        Client client = new Client("client@client.com", "password", "Full Name",2);
         constructionSoftware.addClient(client);
         constructionSoftware.removeClient(client);
         assert(!constructionSoftware.clients.contains(client));
@@ -59,7 +64,7 @@ public class ConstructionSoftwareTest {
 
     @Test
     public void removeMemberTest(){
-        Member member = new Member("member@member.com", "password", 3, "Full Name");
+        Member member = new Member("member@member.com", "password", "Full Name",3);
         constructionSoftware.addMember(member);
         constructionSoftware.removeMember(member);
         assert(!constructionSoftware.members.contains(member));
@@ -67,7 +72,9 @@ public class ConstructionSoftwareTest {
 
     @Test
     public void removeProjectTest(){
-        Project project = new Project("Project Name", 1, 230000, "12/25", "9am-5pm");
+        LocalDateTime time = LocalDateTime.now();
+        LocalDate date = LocalDate.now();
+        Project project = new Project("Project Name", 1, 230000, date, time, time);
         constructionSoftware.addProject(project);
         constructionSoftware.removeProject(project);
         assert(!constructionSoftware.projects.contains(project));
@@ -83,15 +90,19 @@ public class ConstructionSoftwareTest {
 
     @Test
     public void currentProjectsTest(){
-        Project project = new Project("Project Name", 1, 230000, "12/25", "9am-5pm");
-        constructionSoftware.addProject(project);
+        LocalDateTime time = LocalDateTime.now();
+        LocalDate date = LocalDate.now();
+        Project project = new Project("Project Name", 1, 230000, date, time, time);
+        constructionSoftware.addCurrentProject(project); // addCurrentProject is similar to addProject
         assert(constructionSoftware.currentProjects.contains(project));
     }
 
     @Test
     public void pastProjectsTest(){
-        Project project = new Project("Project Name", 1, 230000, "12/25", "9am-5pm");
-        constructionSoftware.addProject(project);
+        LocalDateTime time = LocalDateTime.now();
+        LocalDate date = LocalDate.now();
+        Project project = new Project("Project Name", 1, 230000, date, time, time);
+        constructionSoftware.addPastProject(project); 
         assert(constructionSoftware.pastProjects.contains(project));
     }
 
