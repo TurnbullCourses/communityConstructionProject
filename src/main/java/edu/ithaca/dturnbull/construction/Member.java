@@ -11,7 +11,8 @@ public class Member extends User {
     private String fullName;
 
     // Member Constructor 
-    public Member(String email, String password, Integer id, String fullName) {
+    public Member(Project project, String email, String password, Integer id, String fullName) {
+        super(project, email, password, id, fullName)
         this.email = email;
         this.password = password;
         this.id = id;
