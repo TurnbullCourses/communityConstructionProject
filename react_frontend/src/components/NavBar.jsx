@@ -9,7 +9,7 @@ const NavBar = () => {
   const [current, setCurrent] = useState('h');
   let [isLoggedIn, setIsLoggedIn] = useState(true); // Add a state to track login status -- 
   //spoofed for now with checkbox to see both login and profile views
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('light'); // Add a state to track theme -- will need to stored as user preference in future
 
   const onClick = (e) => {
     console.log('click ', e);

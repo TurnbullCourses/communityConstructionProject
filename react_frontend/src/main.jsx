@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import ProfilePage from './pages/ProfilePage.jsx'
+import LoginPage from './pages/LoginPage.jsx'
+import NavBar from './components/NavBar.jsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -19,12 +21,20 @@ const router = createBrowserRouter([
   },
   {
     path: "/register",
-    element: <div>No Register Page yet</div>,
+    element: <div><div style={{ textAlign: 'center', borderRadius: '10px', position: 'fixed', top: '0', left: '0', right: '0' }}>
+    <NavBar></NavBar>
+</div>No Register Page yet</div>,
   },
   {
     path: "/login",
-    element: <div>No Login Page Yet</div>,
+    element: <div><LoginPage/></div>,
   },
+  {
+    path: "/forgot_password",
+    element: <div><div style={{ textAlign: 'center', borderRadius: '10px', position: 'fixed', top: '0', left: '0', right: '0' }}>
+    <NavBar></NavBar>
+</div>No Forgot Password Page yet</div>,
+  }
 ]);
 
 
