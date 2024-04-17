@@ -4,6 +4,7 @@ import App from './App.jsx'
 import ProfilePage from './pages/ProfilePage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
 import NavBar from './components/NavBar.jsx'
+import RegistrationPage from './pages/RegistrationPage.jsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -21,9 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/register",
-    element: <div><div style={{ textAlign: 'center', borderRadius: '10px', position: 'fixed', top: '0', left: '0', right: '0' }}>
-    <NavBar></NavBar>
-</div>No Register Page yet</div>,
+    element: <div><RegistrationPage/></div>,
   },
   {
     path: "/login",
