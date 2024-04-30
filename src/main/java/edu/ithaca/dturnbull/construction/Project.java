@@ -16,6 +16,8 @@ public class Project {
     private LocalDate creationDate;
     private LocalDateTime operatingHoursStart;
     private LocalDateTime operatingHoursEnd;
+    
+
 
 
 
@@ -27,6 +29,7 @@ public Project(String name, Integer id, double price, LocalDate completionDate, 
     this.operatingHoursStart = operatingHoursStart;
     this.operatingHoursEnd = operatingHoursEnd;
     this.creationDate = LocalDate.now();
+
 }
 
 public int getProjectId() {
@@ -52,6 +55,11 @@ public String getFormattedCompletionDate() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yy");
         return completionDate.format(formatter);
     }
+
+public String getFormattedCreationDate() {
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yy");
+    return creationDate.format(formatter);
+}
 
 public String getOperatingHours() {
     return "From " + operatingHoursStart.toLocalTime().toString() + " to " + operatingHoursEnd.toLocalTime().toString();
