@@ -11,7 +11,7 @@ Scrum Master: Ishmeet Kaur
 
 Sprint goal:
 Designing the overall structure of the project:
-Learn react and google sheets/database
+Learn React and Google Sheets/database
 
 Sprint Review/Retrospective Document (Notes):
 https://docs.google.com/document/d/1Oicgd9lYCta9vnIo3_yIuqycl7W8tmZ5oTPqNrKwT-Y/edit?usp=sharing
@@ -25,11 +25,13 @@ Three Use Cases that you will implement first:
 3. - View operating hours
 
 Which classes & methods do you need to implement for these use cases?
-(Indicated which team member is responsible for the implemenation)
+(Indicated which team member is responsible for the implementation)
 1. - Construction software and Admin - Amir
 2. - Project class - Ishmeet
 3. - User and Client - Gabe
 4. - Member class - Joe
+5. - FrontEnd - Amir and Gabe
+6. - Database - Ishmeet and Joe
 
 
 Don't forget to use Test-Driven Development (TDD)
