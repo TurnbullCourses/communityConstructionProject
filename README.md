@@ -11,10 +11,11 @@ Scrum Master: Ishmeet Kaur
 
 Sprint goal:
 Designing the overall structure of the project:
-Learn react and google sheets/database
+Learn react and google firebase/database
 
 Sprint Review/Retrospective Document (Notes):
 https://docs.google.com/document/d/1Oicgd9lYCta9vnIo3_yIuqycl7W8tmZ5oTPqNrKwT-Y/edit?usp=sharing
+https://docs.google.com/document/d/1vtDaPoIt1Fh_M4CUNWXnCh83XK_iHoMbW-koUprBlBI/edit
 
 Link to UML Use Case Diagram:
 https://drive.google.com/file/d/1gmeFouQo_82v35QDxGCthWoNIe6hs5F2/view?usp=sharing
