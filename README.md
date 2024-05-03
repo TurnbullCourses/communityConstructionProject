@@ -35,25 +35,20 @@ https://docs.google.com/document/d/1vtDaPoIt1Fh_M4CUNWXnCh83XK_iHoMbW-koUprBlBI/
 **NOTE: ^^^ The final burndown chart is located in the '#2 Retrospective' located directly above ^^^**
 
 **Three Use Cases that you will implement first:**
-1. - Create and add User
-2. - Add and modify project
-3. - View operating hours
+1. Create and add User
+2. Add and modify project
+3. View operating hours
 
 **Which classes & methods do you need to implement for these use cases?**
 (Indicated which team member is responsible for the implementation)
-1. - Construction software and Admin - Amir
-2. - Project class - Ishmeet
-3. - User and Client - Gabe
-4. - Member class - Joe
+1. Construction software and Admin - Amir
+2. Project class - Ishmeet
+3. User and Client - Gabe
+4. Member class - Joe
 
 **Don't forget to use Test-Driven Development (TDD)**
 1. Write Class and Method Function Headers
 2. Write Tests
 3. Implement Method Functions
-
-
-
-
-Good Luck!
 
 
