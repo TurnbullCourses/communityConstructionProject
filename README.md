@@ -23,13 +23,13 @@ Scrum Master: Ishmeet Kaur
 https://drive.google.com/file/d/1gmeFouQo_82v35QDxGCthWoNIe6hs5F2/view?usp=sharing
 
 **Sprint Review/Retrospective Document (Notes):**
-#1 Review: 
+#1 Review: <br>
 https://docs.google.com/document/d/1Oicgd9lYCta9vnIo3_yIuqycl7W8tmZ5oTPqNrKwT-Y/edit?usp=sharing
-#1 Retrospective: 
+#1 Retrospective: <br>
 https://docs.google.com/document/d/1vtDaPoIt1Fh_M4CUNWXnCh83XK_iHoMbW-koUprBlBI/edit
-#2 Review: 
+#2 Review: <br>
 https://docs.google.com/document/d/1L_Gridcnox_f9Z7NhPxAdrv8-wLen-ta2FILjPT2lD4/edit?usp=sharing
-#2 Retrospective: 
+#2 Retrospective: <br>
 https://docs.google.com/document/d/1vtDaPoIt1Fh_M4CUNWXnCh83XK_iHoMbW-koUprBlBI/edit?usp=sharing
 
 **NOTE: ^^^ The final burndown chart is located in the '#2 Retrospective' located directly above ^^^**
