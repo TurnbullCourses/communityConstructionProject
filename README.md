@@ -34,6 +34,9 @@ https://docs.google.com/document/d/1vtDaPoIt1Fh_M4CUNWXnCh83XK_iHoMbW-koUprBlBI/
 
 **NOTE: ^^^ The final burndown chart is located in the '#2 Retrospective' located directly above ^^^**
 
+**Quick Start Guide:**
+HERE
+
 **Three Use Cases that you will implement first:**
 1. Create and add User
 2. Add and modify project
