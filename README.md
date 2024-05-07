@@ -34,7 +34,7 @@ https://docs.google.com/document/d/1vtDaPoIt1Fh_M4CUNWXnCh83XK_iHoMbW-koUprBlBI/
 
 **NOTE: ^^^ The final burndown chart is located in the '#2 Retrospective' located directly above ^^^**
 
-**Quick Start Guide:**
+**Quick Start Guide -- HOW TO RUN:**
 1. Clone the repository
 2. To run, cd to react-frontend and run with "npm run dev"
    
